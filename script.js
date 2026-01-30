@@ -8,21 +8,12 @@ if (tamu) {
   namaEl.textContent = decodeURIComponent(tamu);
 }
 
-// ================= FADE LOAD =================
-
-window.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".fade").forEach(el => {
-    setTimeout(() => {
-      el.classList.add("show");
-    }, 300);
-  });
-});
-
 // ================= OPEN INVITATION =================
 
 const openBtn = document.querySelector(".open-btn");
 const homeSection = document.getElementById("homeSection");
-const card = document.querySelector(".card");
+const card = document.getElementById("coverCard");
+const bottomNav = document.getElementById("bottomNav");
 
 openBtn.addEventListener("click", () => {
   card.style.opacity = "0";
@@ -30,5 +21,6 @@ openBtn.addEventListener("click", () => {
   setTimeout(() => {
     card.style.display = "none";
     homeSection.classList.add("show");
+    bottomNav.classList.add("show");
   }, 600);
 });
