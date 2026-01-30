@@ -6,18 +6,29 @@ const namaEl = document.getElementById("namaTamu");
 
 if (tamu) {
   namaEl.textContent = decodeURIComponent(tamu);
-} else {
-  namaEl.textContent = "Tamu Undangan";
 }
 
-// ================= FADE-IN STAGGER =================
+// ================= FADE LOAD =================
 
 window.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(".fade");
-
-  elements.forEach((el, index) => {
+  document.querySelectorAll(".fade").forEach(el => {
     setTimeout(() => {
       el.classList.add("show");
-    }, index * 300);
+    }, 300);
   });
+});
+
+// ================= OPEN INVITATION =================
+
+const openBtn = document.querySelector(".open-btn");
+const homeSection = document.getElementById("homeSection");
+const card = document.querySelector(".card");
+
+openBtn.addEventListener("click", () => {
+  card.style.opacity = "0";
+
+  setTimeout(() => {
+    card.style.display = "none";
+    homeSection.classList.add("show");
+  }, 600);
 });
