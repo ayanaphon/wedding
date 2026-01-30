@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: Georgia, serif;
   background: #f8f6f3;
@@ -15,17 +19,19 @@ body.locked {
   overflow: hidden;
 }
 
-/* FULL SCREEN CENTER */
+/* FULLSCREEN CENTER PERFECT */
 .opening {
   position: relative;
   min-height: 100vh;
+
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;      /* center vertikal */
+  justify-content: center;  /* center horizontal */
+
   overflow: hidden;
 }
 
-/* BATASI LEBAR */
+/* BATASI LEBAR SUPAYA TIDAK MELEBAR */
 .container {
   width: 100%;
   max-width: 480px;
@@ -39,19 +45,18 @@ body.locked {
 
 .ornamen {
   position: absolute;
-  width: 20vw;         /* responsive */
-  max-width: 220px;    /* batas desktop */
+  width: 200px;
   pointer-events: none;
-  opacity: 0.85;
+  z-index: 1;
 }
 
-/* KIRI */
+/* ATAS KIRI */
 .ornamen.left {
   top: 0;
   left: 0;
 }
 
-/* KANAN */
+/* ATAS KANAN */
 .ornamen.right {
   top: 0;
   right: 0;
@@ -61,7 +66,7 @@ body.locked {
 
 .couple {
   font-size: 30px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .date {
@@ -92,10 +97,10 @@ body.locked {
   cursor: pointer;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 @media (max-width: 480px) {
   .ornamen {
-    width: 28vw;
+    width: 140px;
   }
 
   .couple {
