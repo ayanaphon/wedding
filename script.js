@@ -2,10 +2,10 @@
 const params = new URLSearchParams(window.location.search);
 const tamu = params.get("tamu");
 
-// Target elemen nama tamu
+// Target elemen
 const namaEl = document.getElementById("namaTamu");
 
-// Tampilkan nama tamu
+// Set nama tamu
 if (tamu) {
   namaEl.textContent = decodeURIComponent(tamu);
 } else {
@@ -14,6 +14,6 @@ if (tamu) {
 
 // Tombol buka undangan
 function openInvitation() {
-  // ganti ke halaman utama undangan
+  // ganti ke halaman utama nanti, misalnya home.html
   window.location.href = "home.html";
 }
