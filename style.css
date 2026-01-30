@@ -172,23 +172,18 @@ body {
 /* ================= BOTTOM NAV ================= */
 
 .bottom-nav {
-  position: fixed;
-  bottom: -100px;
+  position: absolute;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 360px;
-  height: 65px;
+  width: 90%;
+  height: 60px;
   background: #7a1f1f;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 20px;
-  transition: 0.4s ease;
-  z-index: 9999;
-}
-
-.bottom-nav.show {
-  bottom: 20px;
+  border-radius: 18px;
+  z-index: 20;
 }
 
 .nav-item {
@@ -197,3 +192,4 @@ body {
   font-size: 11px;
   flex: 1;
 }
+
