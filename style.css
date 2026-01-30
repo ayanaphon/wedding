@@ -7,13 +7,17 @@
 body {
   background: #6b4037;
   font-family: Georgia, serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* WRAPPER LUAR */
 .outer {
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding: 40px 20px;
 }
 
 /* CARD */
@@ -21,36 +25,42 @@ body {
   background: #f4f1ee;
   width: 100%;
   max-width: 500px;
-  min-height: 90vh;
-  border-radius: 25px;
-  padding: 40px 20px;
+  min-height: 88vh; /* lebih proporsional */
+  border-radius: 30px;
+  padding: 70px 30px; /* atas & bawah lebih seimbang */
   text-align: center;
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+
+  display: flex;
+  align-items: center; /* center vertikal */
 }
 
 /* CONTENT */
 .content {
   max-width: 400px;
-  margin: auto;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px; /* jarak konsisten antar elemen */
 }
 
 /* TEKS */
 .couple {
-  font-size: 30px;
+  font-size: 32px;
   color: #7a1f1f;
-  margin-bottom: 6px;
 }
 
 .date {
-  font-size: 14px;
+  font-size: 15px;
   color: #7a1f1f;
-  margin-bottom: 25px;
 }
 
 .illustration img {
   width: 100%;
-  max-width: 320px;
-  margin-bottom: 25px;
+  max-width: 300px;
 }
 
 .guest p {
@@ -58,37 +68,12 @@ body {
 }
 
 #namaTamu {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   color: #7a1f1f;
-  margin-top: 6px;
 }
 
+/* BUTTON */
 .open-btn {
-  margin-top: 20px;
-  padding: 14px 32px;
-  background: #7a1f1f;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.open-btn:hover {
-  transform: scale(1.05);
-}
-
-/* ================= FADE ANIMATION ================= */
-
-.fade {
-  opacity: 0;
-  transform: translateY(30px) scale(0.95);
-  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.fade.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
+  margin-top: 10px;
+  padding:
