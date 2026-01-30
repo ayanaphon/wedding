@@ -5,41 +5,15 @@
 }
 
 body {
-  background: linear-gradient(135deg, #6b4037, #4a2a23);
+  background: #6b4037;
   font-family: Georgia, serif;
-  position: relative;
-  overflow-x: hidden;
 }
 
-/* FRAME KIRI KANAN */
-.frame-left,
-.frame-right {
-  position: fixed;
-  top: 0;
-  width: 6px;
-  height: 100vh;
-  background: linear-gradient(to bottom, #7a1f1f, #a52a2a);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.frame-left {
-  left: 0;
-}
-
-.frame-right {
-  right: 0;
-}
-
-/* CENTER WRAPPER */
+/* WRAPPER LUAR */
 .outer {
-  min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 20px;
-  position: relative;
-  z-index: 1;
+  padding: 40px 20px;
 }
 
 /* CARD */
@@ -47,15 +21,22 @@ body {
   background: #f4f1ee;
   width: 100%;
   max-width: 500px;
-  padding: 50px 25px;
-  border-radius: 30px;
+  min-height: 90vh;
+  border-radius: 25px;
+  padding: 40px 20px;
   text-align: center;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* CONTENT */
+.content {
+  max-width: 400px;
+  margin: auto;
 }
 
 /* TEKS */
 .couple {
-  font-size: 32px;
+  font-size: 30px;
   color: #7a1f1f;
   margin-bottom: 6px;
 }
@@ -63,13 +44,13 @@ body {
 .date {
   font-size: 14px;
   color: #7a1f1f;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .illustration img {
   width: 100%;
-  max-width: 340px;
-  margin-bottom: 30px;
+  max-width: 320px;
+  margin-bottom: 25px;
 }
 
 .guest p {
@@ -78,16 +59,36 @@ body {
 
 #namaTamu {
   font-size: 18px;
-  font
-/* FADE ANIMATION */
+  font-weight: bold;
+  color: #7a1f1f;
+  margin-top: 6px;
+}
+
+.open-btn {
+  margin-top: 20px;
+  padding: 14px 32px;
+  background: #7a1f1f;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.open-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ================= FADE ANIMATION ================= */
+
 .fade {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease;
+  transform: translateY(30px) scale(0.95);
+  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .fade.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
-
