@@ -34,9 +34,7 @@ body {
   border-radius: 40px;
   padding: 12px;
   position: relative;
-  box-shadow:
-    0 40px 100px rgba(0,0,0,0.6),
-    inset 0 0 0 2px rgba(255,255,255,0.05);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.6);
 }
 
 .phone-frame::before {
@@ -59,6 +57,7 @@ body {
   height: 100%;
   border-radius: 30px;
   overflow: hidden;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +77,17 @@ body {
 
 .couple { font-size: 28px; color: #7a1f1f; }
 .date { color: #7a1f1f; }
-.namaTamu { font-size: 18px; font-weight: bold; color: #7a1f1f; }
+
+.illustration img {
+  max-width: 220px;
+  height: auto;
+}
+
+.namaTamu {
+  font-size: 18px;
+  font-weight: bold;
+  color: #7a1f1f;
+}
 
 .open-btn {
   padding: 12px 30px;
@@ -96,7 +105,6 @@ body {
   inset: 0;
   opacity: 0;
   pointer-events: none;
-  transition: 0.5s ease;
 }
 
 .screen.show {
@@ -118,20 +126,20 @@ body {
 
 .oval-box {
   width: 85%;
-  height: 88%;
+  height: 85%;
   background: #e8ddb7;
-  border-radius: 250px;
-  padding: 50px 30px;
+  border-radius: 200px;
+  padding: 40px 25px;
   text-align: center;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 22px;
+  gap: 20px;
 }
 
 .nama-besar {
-  font-size: 32px;
+  font-size: 30px;
   color: #7a1f1f;
   font-weight: bold;
 }
@@ -142,11 +150,11 @@ body {
 }
 
 .countdown div {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   background: #7a1f1f;
   color: white;
-  border-radius: 14px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,7 +164,7 @@ body {
 .btn-calendar {
   padding: 12px;
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
   background: #7a1f1f;
   color: white;
 }
@@ -188,9 +196,4 @@ body {
   color: white;
   font-size: 11px;
   flex: 1;
-}
-
-.nav-item span {
-  display: block;
-  font-size: 18px;
 }
