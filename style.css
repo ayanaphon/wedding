@@ -92,10 +92,6 @@ body {
   max-width: 220px;
 }
 
-.guest p {
-  color: #7a1f1f;
-}
-
 .namaTamu {
   font-size: 18px;
   font-weight: bold;
@@ -111,7 +107,7 @@ body {
   cursor: pointer;
 }
 
-/* ================= SCREEN SYSTEM ================= */
+/* ================= SCREEN ================= */
 
 .screen {
   position: absolute;
@@ -156,7 +152,6 @@ body {
 
 .salam-title {
   color: #7a1f1f;
-  font-size: 16px;
 }
 
 .salam-text {
@@ -166,6 +161,82 @@ body {
 }
 
 .nama-besar {
-  font-size: 34px;
+  font-size: 32px;
   color: #7a1f1f;
-  font-weight: bo
+  font-weight: bold;
+}
+
+.nama-besar span {
+  font-size: 24px;
+}
+
+/* Countdown */
+.countdown {
+  display: flex;
+  justify-content: space-between;
+}
+
+.countdown div {
+  width: 60px;
+  height: 60px;
+  background: #7a1f1f;
+  color: white;
+  border-radius: 14px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.btn-calendar {
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: #7a1f1f;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= BOTTOM NAV ================= */
+
+.bottom-nav {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 360px;
+  height: 65px;
+  background: #7a1f1f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  z-index: 9999;
+}
+
+.bottom-nav.show {
+  bottom: 20px;
+}
+
+.nav-item {
+  text-align: center;
+  color: white;
+  font-size: 11px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.nav-item span {
+  display: block;
+  font-size: 18px;
+}
+
+.nav-item.active {
+  background: #d4b45f;
+  color: #7a1f1f;
+  border-radius: 12px;
+  padding: 5px 0;
+}
