@@ -5,91 +5,84 @@
 }
 
 body {
-  background: #5b3a34; /* warna luar */
+  background: linear-gradient(135deg, #6b4037, #4a2a23);
   font-family: Georgia, serif;
 }
 
-/* WRAPPER LUAR */
+/* CENTER WRAPPER */
 .outer {
+  min-height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
-/* CARD UTAMA */
+/* CARD */
 .card {
-  position: relative;
   background: #f4f1ee;
   width: 100%;
   max-width: 500px;
-  min-height: 90vh;
-  border-radius: 20px;
-  overflow: hidden;
-  padding: 40px 20px 80px;
+  padding: 50px 25px;
+  border-radius: 30px;
   text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
 }
 
-/* ORNAMEN ATAS */
-.frame {
-  position: absolute;
-  width: 160px;
-  top: 0;
-}
-
-.frame.left {
-  left: 0;
-}
-
-.frame.right {
-  right: 0;
-}
-
-/* ORNAMEN BAWAH */
-.bottom-ornament {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-/* CONTENT */
-.content {
-  position: relative;
-  z-index: 2;
-}
-
+/* TEKS */
 .couple {
-  font-size: 30px;
+  font-size: 32px;
   color: #7a1f1f;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .date {
   font-size: 14px;
   color: #7a1f1f;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .illustration img {
   width: 100%;
-  max-width: 320px;
-  margin-bottom: 25px;
+  max-width: 340px;
+  margin-bottom: 30px;
+}
+
+.guest p {
+  color: #7a1f1f;
 }
 
 #namaTamu {
   font-size: 18px;
   font-weight: bold;
-  color: #7a1f1f;
   margin-top: 6px;
+  color: #7a1f1f;
 }
 
 .open-btn {
-  margin-top: 20px;
-  padding: 12px 30px;
+  margin-top: 25px;
+  padding: 14px 35px;
   background: #7a1f1f;
   color: white;
   border: none;
-  border-radius: 25px;
-  font-size: 14px;
+  border-radius: 30px;
+  font-size: 15px;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.open-btn:hover {
+  transform: scale(1.05);
+}
+
+/* FADE ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
