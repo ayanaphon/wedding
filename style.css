@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-/* BACKGROUND LUAR */
+/* ================= BACKGROUND ================= */
+
 body {
   font-family: Georgia, serif;
   min-height: 100vh;
@@ -14,7 +15,8 @@ body {
   background: linear-gradient(135deg, #7a1f1f, #6b4037);
 }
 
-/* COVER */
+/* ================= COVER ================= */
+
 .outer {
   width: 100%;
   display: flex;
@@ -33,7 +35,6 @@ body {
   background:
     linear-gradient(rgba(244,241,238,0.96), rgba(244,241,238,0.96)),
     url("assets/batik.jpg") center/cover no-repeat;
-  position: relative;
   transition: 0.8s ease;
 }
 
@@ -95,7 +96,7 @@ body {
 
   opacity: 0;
   pointer-events: none;
-  transition: 1s ease;
+  transition: 0.8s ease;
 }
 
 .home.show {
@@ -129,13 +130,48 @@ body {
   margin-top: 20px;
 }
 
-.fade {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 1s ease;
+/* ================= BOTTOM NAV ================= */
+
+.bottom-nav {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #7a1f1f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.25);
+  transition: 0.5s ease;
+  z-index: 999;
 }
 
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
+.bottom-nav.show {
+  bottom: 0;
+}
+
+.nav-item {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  flex: 1;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+
+.nav-item span {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.nav-item.active {
+  background: #d4b45f;
+  color: #7a1f1f;
+  border-radius: 15px;
+  margin: 5px;
 }
