@@ -150,3 +150,8 @@ body.locked {
     font-size: 20px;
   }
 }
+.opening {
+  position: relative;
+  overflow: hidden;
+}
+
