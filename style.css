@@ -39,7 +39,7 @@ body {
 
   /* BACKGROUND BATIK DALAM CARD */
   background:
-    linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.90)),
+    linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
     url("assets/batik.jpg") center/cover no-repeat;
 }
 
@@ -139,3 +139,4 @@ body {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
