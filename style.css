@@ -1,116 +1,83 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   font-family: Georgia, serif;
-  background-color: #fdfbf7;
-  color: #333;
+  background: #ffffff;
+  color: #7a1f1f;
   text-align: center;
-  line-height: 1.6;
 }
 
-/* COVER */
-.cover {
+/* HALAMAN PEMBUKA */
+.opening {
   min-height: 100vh;
-  padding: 80px 20px;
-  background: linear-gradient(to bottom, #f5eee6, #ffffff);
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+/* NAMA PASANGAN */
+.couple {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+/* TANGGAL */
+.date {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* ILUSTRASI */
+.illustration img {
+  max-width: 220px;
+  margin: 20px 0;
 }
 
 /* TAMU */
-.tamu {
-  font-size: 18px;
-  margin-bottom: 24px;
-  opacity: 0;
-  animation: fadeIn 1.5s ease forwards;
+.guest {
+  margin: 20px 0;
 }
 
-/* TEKS */
-.subtitle {
-  font-size: 16px;
+.greeting,
+.family {
+  font-size: 14px;
 }
 
-.nama {
-  font-size: 42px;
-  margin: 10px 0;
-}
-
-.date {
-  font-size: 18px;
-  margin-top: 8px;
+#namaTamu {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 6px;
 }
 
 /* BUTTON */
-.btn {
-  margin-top: 40px;
-  padding: 14px 34px;
-  background-color: #c9a86a;
-  color: #fff;
-  text-decoration: none;
+.open-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #7a1f1f;
+  color: #ffffff;
+  border: none;
   border-radius: 30px;
   font-size: 16px;
-  transition: background 0.3s ease;
+  cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #b89655;
-}
-
-.btn.small {
-  margin-top: 20px;
-  padding: 10px 26px;
-  font-size: 14px;
-}
-
-/* SECTION */
-section {
-  padding: 60px 20px;
-}
-
-/* BOX DETAIL */
-.box {
-  background: #ffffff;
-  margin: 20px auto;
-  max-width: 400px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-/* FOOTER */
-footer {
-  padding: 40px 20px;
-  font-size: 14px;
-  color: #666;
-}
-
-/* ANIMASI */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.open-btn:hover {
+  background: #5e1515;
 }
 
 /* RESPONSIVE */
 @media (max-width: 480px) {
-  .nama {
-    font-size: 32px;
+  .couple {
+    font-size: 26px;
   }
 
-  .tamu {
-    font-size: 16px;
+  #namaTamu {
+    font-size: 20px;
   }
 }
