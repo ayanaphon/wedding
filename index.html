@@ -2,55 +2,44 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Wedding Invitation</title>
+  <title>Wedding Invitation | Rifky & Bela</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- JavaScript -->
   <script src="script.js" defer></script>
 </head>
 <body>
 
-  <!-- COVER -->
-  <section class="cover">
-    <div class="tamu" id="namaTamu">Yth. Tamu Undangan</div>
+<section class="opening">
 
-    <p class="subtitle">Undangan Pernikahan</p>
-    <h1 class="nama">Rifky & Bela</h1>
-    <p class="date">Kamis, 14 Mei 2026</p>
+  <!-- ORNAMEN ATAS -->
+  <div class="ornament top"></div>
 
-    <a href="#acara" class="btn">Buka Undangan</a>
-  </section>
+  <!-- NAMA PASANGAN -->
+  <h1 class="couple">Rifky & Bela</h1>
+  <p class="date">Kamis, 14 Mei 2026</p>
 
-  <!-- ACARA -->
-  <section id="acara">
-    <h2>Detail Acara</h2>
+  <!-- ILUSTRASI -->
+  <div class="illustration">
+    <img src="assets/rumah.png" alt="Ilustrasi Rumah Adat">
+  </div>
 
-    <div class="box">
-      <h3>Akad Nikah</h3>
-      <p>Kamis, 14 Mei 2026</p>
-      <p>Pukul 10.00 WIB</p>
-    </div>
+  <!-- TAMU -->
+  <div class="guest">
+    <p>Kepada Yth;</p>
+    <p>Bapak / Ibu / Saudara / i</p>
+    <h2 id="namaTamu">Darten</h2>
+  </div>
 
-    <div class="box">
-      <h3>Resepsi</h3>
-      <p>Kamis, 14 Mei 2026</p>
-      <p>Pukul 11.00 WIB</p>
-    </div>
+  <!-- BUTTON -->
+  <button class="open-btn" onclick="openInvitation()">
+    Open Invitation
+  </button>
 
-    <a class="btn small" href="https://maps.google.com" target="_blank">
-      Lihat Lokasi
-    </a>
-  </section>
+  <!-- ORNAMEN BAWAH -->
+  <div class="ornament bottom"></div>
 
-  <!-- PENUTUP -->
-  <footer>
-    <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami</p>
-    <p>Rifky & Bela</p>
-  </footer>
+</section>
 
 </body>
 </html>
-
