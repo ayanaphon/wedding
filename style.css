@@ -39,8 +39,8 @@ body {
 
   /* BACKGROUND BATIK DALAM CARD */
   background:
-    linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
-    url("assets/batik.jpg") center/cover no-repeat;
+  linear-gradient(rgba(244,241,238,0.96), rgba(244,241,238,0.96)),
+  url("assets/batik.jpg") center/cover no-repeat;
 }
 
 /* ORNAMEN KIRI */
@@ -139,4 +139,5 @@ body {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
 
