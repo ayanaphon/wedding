@@ -10,22 +10,8 @@ if (tamu) {
   namaEl.textContent = "Tamu Undangan";
 }
 
-// ================= BUKA UNDANGAN =================
+// ================= UNLOCK =================
 
 function openInvitation() {
   document.body.classList.remove("locked");
 }
-
-// ================= PARALLAX RINGAN =================
-
-window.addEventListener("scroll", () => {
-  const scrolled = window.scrollY;
-
-  const left = document.querySelector(".ornamen.left");
-  const right = document.querySelector(".ornamen.right");
-
-  if (left && right) {
-    left.style.transform = `translateY(${scrolled * 0.12}px)`;
-    right.style.transform = `translateY(${scrolled * 0.12}px)`;
-  }
-});
