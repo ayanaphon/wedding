@@ -10,7 +10,6 @@ html, body {
   font-family: Georgia, serif;
 }
 
-/* Background luar */
 body {
   display: flex;
   justify-content: center;
@@ -40,7 +39,6 @@ body {
     inset 0 0 0 2px rgba(255,255,255,0.05);
 }
 
-/* Notch */
 .phone-frame::before {
   content: "";
   position: absolute;
@@ -61,7 +59,6 @@ body {
   height: 100%;
   border-radius: 30px;
   overflow: hidden;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,24 +76,9 @@ body {
   padding: 40px 20px;
 }
 
-.couple {
-  font-size: 28px;
-  color: #7a1f1f;
-}
-
-.date {
-  color: #7a1f1f;
-}
-
-.illustration img {
-  max-width: 220px;
-}
-
-.namaTamu {
-  font-size: 18px;
-  font-weight: bold;
-  color: #7a1f1f;
-}
+.couple { font-size: 28px; color: #7a1f1f; }
+.date { color: #7a1f1f; }
+.namaTamu { font-size: 18px; font-weight: bold; color: #7a1f1f; }
 
 .open-btn {
   padding: 12px 30px;
@@ -146,18 +128,6 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 22px;
-
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.salam-title {
-  color: #7a1f1f;
-}
-
-.salam-text {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #7a1f1f;
 }
 
 .nama-besar {
@@ -166,11 +136,6 @@ body {
   font-weight: bold;
 }
 
-.nama-besar span {
-  font-size: 24px;
-}
-
-/* Countdown */
 .countdown {
   display: flex;
   justify-content: space-between;
@@ -182,21 +147,18 @@ body {
   background: #7a1f1f;
   color: white;
   border-radius: 14px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* Button */
 .btn-calendar {
   padding: 12px;
   border: none;
   border-radius: 30px;
   background: #7a1f1f;
   color: white;
-  cursor: pointer;
 }
 
 /* ================= BOTTOM NAV ================= */
@@ -225,18 +187,10 @@ body {
   text-align: center;
   color: white;
   font-size: 11px;
-  cursor: pointer;
   flex: 1;
 }
 
 .nav-item span {
   display: block;
   font-size: 18px;
-}
-
-.nav-item.active {
-  background: #d4b45f;
-  color: #7a1f1f;
-  border-radius: 12px;
-  padding: 5px 0;
 }
