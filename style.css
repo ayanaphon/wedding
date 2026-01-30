@@ -14,7 +14,7 @@ body {
 /* HALAMAN PEMBUKA */
 .opening {
   min-height: 100vh;
-  padding: 50px 20px;
+  padding: 40px 20px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,25 +23,33 @@ body {
 
 /* NAMA PASANGAN */
 .couple {
-  font-size: 32px;
+  font-size: 34px;
   margin-bottom: 6px;
 }
 
 /* TANGGAL */
 .date {
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-/* ILUSTRASI */
+/* ILUSTRASI (INI KUNCI BESARNYA) */
+.illustration {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 30px;
+}
+
 .illustration img {
-  max-width: 220px;
-  margin: 20px 0;
+  width: 100%;
+  max-width: 420px; /* BESAR & PROPORSIONAL */
+  height: auto;
 }
 
-/* TAMU */
+/* SAPAAN TAMU */
 .guest {
-  margin: 20px 0;
+  margin: 10px 0 25px;
 }
 
 .greeting,
@@ -57,27 +65,6 @@ body {
 
 /* BUTTON */
 .open-btn {
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: #7a1f1f;
-  color: #ffffff;
-  border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.open-btn:hover {
-  background: #5e1515;
-}
-
-/* RESPONSIVE */
-@media (max-width: 480px) {
-  .couple {
-    font-size: 26px;
-  }
-
-  #namaTamu {
-    font-size: 20px;
-  }
-}
+  margin-top: 10px;
+  padding: 14px 34px;
+  background:
