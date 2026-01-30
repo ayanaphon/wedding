@@ -67,4 +67,29 @@ body {
 .open-btn {
   margin-top: 10px;
   padding: 14px 34px;
-  background:
+  background: #7a1f1f;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.open-btn:hover {
+  background: #5e1515;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 480px) {
+  .couple {
+    font-size: 28px;
+  }
+
+  .illustration img {
+    max-width: 360px; /* BESAR DI HP */
+  }
+
+  #namaTamu {
+    font-size: 20px;
+  }
+}
