@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* ================= NAMA TAMU ================= */
-
+  /* ====== NAMA TAMU ====== */
   const params = new URLSearchParams(window.location.search);
   let tamu = params.get("tamu");
 
@@ -17,20 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
     el.textContent = decodeURIComponent(tamu);
   });
 
-
-  /* ================= OPEN INVITATION ================= */
-
+  /* ====== OPEN INVITATION ====== */
   const openBtn = document.querySelector(".open-btn");
   const coverCard = document.getElementById("coverCard");
   const salamSection = document.getElementById("salamSection");
   const bottomNav = document.getElementById("bottomNav");
 
-  if (openBtn) {
-    openBtn.addEventListener("click", function () {
-      coverCard.style.display = "none";
-      salamSection.classList.add("show");
-      bottomNav.classList.add("show");
-    });
-  }
+  openBtn.addEventListener("click", function () {
+    coverCard.style.display = "none";
+    salamSection.classList.add("show");
+    bottomNav.classList.remove("hidden");
+  });
 
 });
