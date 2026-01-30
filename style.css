@@ -15,7 +15,7 @@ body.locked {
   overflow: hidden;
 }
 
-/* SECTION FULLSCREEN */
+/* FULL SCREEN CENTER */
 .opening {
   position: relative;
   min-height: 100vh;
@@ -25,10 +25,10 @@ body.locked {
   overflow: hidden;
 }
 
-/* BATASI LEBAR KONTEN */
+/* BATASI LEBAR */
 .container {
   width: 100%;
-  max-width: 500px;   /* INI KUNCI SUPAYA TIDAK MELEBAR */
+  max-width: 480px;
   text-align: center;
   padding: 20px;
   position: relative;
@@ -39,10 +39,10 @@ body.locked {
 
 .ornamen {
   position: absolute;
-  width: 18vw;         /* responsive */
-  max-width: 220px;    /* batas maksimum */
+  width: 20vw;         /* responsive */
+  max-width: 220px;    /* batas desktop */
   pointer-events: none;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 /* KIRI */
@@ -57,38 +57,38 @@ body.locked {
   right: 0;
 }
 
-/* ================= TEKS ================= */
+/* ================= KONTEN ================= */
 
 .couple {
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: 6px;
 }
 
 .date {
-  font-size: 15px;
+  font-size: 14px;
   margin-bottom: 25px;
 }
 
 .illustration img {
   width: 100%;
-  max-width: 360px;
+  max-width: 340px;
   margin-bottom: 25px;
 }
 
 #namaTamu {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   margin-top: 6px;
 }
 
 .open-btn {
   margin-top: 20px;
-  padding: 12px 30px;
+  padding: 12px 28px;
   background: #7a1f1f;
   color: white;
   border: none;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
 }
 
@@ -99,6 +99,6 @@ body.locked {
   }
 
   .couple {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
