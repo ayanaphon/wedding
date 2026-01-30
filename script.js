@@ -5,7 +5,7 @@ const tamu = params.get("tamu");
 // Target elemen nama tamu
 const namaEl = document.getElementById("namaTamu");
 
-// Set nama tamu
+// Tampilkan nama tamu
 if (tamu) {
   namaEl.textContent = decodeURIComponent(tamu);
 } else {
@@ -14,7 +14,5 @@ if (tamu) {
 
 // Tombol buka undangan
 function openInvitation() {
-  // jika belum ada halaman lanjutan, biarkan dulu
-  // nanti bisa diganti ke home.html
   alert("Undangan dibuka");
 }
