@@ -4,24 +4,30 @@
   box-sizing: border-box;
 }
 
-/* BACKGROUND LUAR PUTIH */
+/* ================= BACKGROUND LUAR (TEMA MAROON) ================= */
+
 body {
-  background: #ffffff;
   font-family: Georgia, serif;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background:
+    radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 60%),
+    linear-gradient(135deg, #7a1f1f 0%, #6b4037 100%);
 }
 
-/* WRAPPER */
+/* ================= WRAPPER ================= */
+
 .outer {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-/* CARD */
+/* ================= CARD ================= */
+
 .card {
   width: 100%;
   max-width: 500px;
@@ -29,7 +35,7 @@ body {
   border-radius: 30px;
   padding: 70px 30px;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
 
   display: flex;
   align-items: center;
@@ -37,13 +43,14 @@ body {
   position: relative;
   overflow: hidden;
 
-  /* BACKGROUND BATIK DALAM CARD */
+  /* Background batik dalam card */
   background:
-  linear-gradient(rgba(244,241,238,0.96), rgba(244,241,238,0.96)),
-  url("assets/batik.jpg") center/cover no-repeat;
+    linear-gradient(rgba(244,241,238,0.96), rgba(244,241,238,0.96)),
+    url("assets/batik.jpg") center/cover no-repeat;
 }
 
-/* ORNAMEN KIRI */
+/* ================= ORNAMEN KIRI ================= */
+
 .card::before {
   content: "";
   position: absolute;
@@ -58,7 +65,8 @@ body {
   pointer-events: none;
 }
 
-/* ORNAMEN KANAN */
+/* ================= ORNAMEN KANAN ================= */
+
 .card::after {
   content: "";
   position: absolute;
@@ -73,7 +81,8 @@ body {
   pointer-events: none;
 }
 
-/* CONTENT */
+/* ================= CONTENT ================= */
+
 .content {
   max-width: 400px;
   width: 100%;
@@ -85,10 +94,12 @@ body {
   gap: 24px;
 }
 
-/* TEKS */
+/* ================= TEKS ================= */
+
 .couple {
   font-size: 32px;
   color: #7a1f1f;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.08);
 }
 
 .date {
@@ -111,7 +122,8 @@ body {
   color: #7a1f1f;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
+
 .open-btn {
   margin-top: 10px;
   padding: 14px 36px;
@@ -128,7 +140,8 @@ body {
   transform: scale(1.05);
 }
 
-/* ANIMATION */
+/* ================= ANIMATION ================= */
+
 .fade {
   opacity: 0;
   transform: translateY(30px) scale(0.95);
@@ -139,5 +152,3 @@ body {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
-
-
