@@ -7,6 +7,28 @@
 body {
   background: linear-gradient(135deg, #6b4037, #4a2a23);
   font-family: Georgia, serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* FRAME KIRI KANAN */
+.frame-left,
+.frame-right {
+  position: fixed;
+  top: 0;
+  width: 6px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #7a1f1f, #a52a2a);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.frame-left {
+  left: 0;
+}
+
+.frame-right {
+  right: 0;
 }
 
 /* CENTER WRAPPER */
@@ -16,6 +38,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 /* CARD */
@@ -27,79 +51,9 @@ body {
   border-radius: 30px;
   text-align: center;
   box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-  position: relative;
-  overflow: hidden;
 }
 
-/* ========================= */
-/* ANIMASI BINGKAI */
-/* ========================= */
-
-/* Garis atas & bawah */
-.card::before,
-.card::after {
-  content: "";
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: linear-gradient(to right, #7a1f1f, #a52a2a);
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: growX 1.2s ease forwards;
-}
-
-.card::before {
-  top: 0;
-  left: 0;
-}
-
-.card::after {
-  bottom: 0;
-  left: 0;
-  animation-delay: 0.3s;
-}
-
-/* Garis kiri & kanan */
-.card .border-left,
-.card .border-right {
-  position: absolute;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(to bottom, #7a1f1f, #a52a2a);
-  transform: scaleY(0);
-  transform-origin: top;
-  animation: growY 1.2s ease forwards;
-}
-
-.card .border-left {
-  left: 0;
-  top: 0;
-  animation-delay: 0.6s;
-}
-
-.card .border-right {
-  right: 0;
-  top: 0;
-  animation-delay: 0.9s;
-}
-
-/* Keyframes */
-@keyframes growX {
-  to {
-    transform: scaleX(1);
-  }
-}
-
-@keyframes growY {
-  to {
-    transform: scaleY(1);
-  }
-}
-
-/* ========================= */
 /* TEKS */
-/* ========================= */
-
 .couple {
   font-size: 32px;
   color: #7a1f1f;
@@ -124,35 +78,4 @@ body {
 
 #namaTamu {
   font-size: 18px;
-  font-weight: bold;
-  margin-top: 6px;
-  color: #7a1f1f;
-}
-
-.open-btn {
-  margin-top: 25px;
-  padding: 14px 35px;
-  background: #7a1f1f;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.open-btn:hover {
-  transform: scale(1.05);
-}
-
-/* FADE ANIMATION */
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease;
-}
-
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+  font
