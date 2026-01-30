@@ -2,7 +2,7 @@
 const params = new URLSearchParams(window.location.search);
 const tamu = params.get("tamu");
 
-// Target elemen
+// Target elemen nama tamu
 const namaEl = document.getElementById("namaTamu");
 
 // Set nama tamu
@@ -14,6 +14,7 @@ if (tamu) {
 
 // Tombol buka undangan
 function openInvitation() {
-  // ganti ke halaman utama nanti, misalnya home.html
-  window.location.href = "home.html";
+  // jika belum ada halaman lanjutan, biarkan dulu
+  // nanti bisa diganti ke home.html
+  alert("Undangan dibuka");
 }
