@@ -1,87 +1,74 @@
-/* =====================================================
-   NAMA TAMU UNIVERSAL (URL + LOCAL STORAGE STABLE)
-===================================================== */
+document.addEventListener("DOMContentLoaded", function () {
 
-const params = new URLSearchParams(window.location.search);
-let tamu = params.get("tamu");
+  /* ================= NAMA TAMU ================= */
 
-// Jika ada parameter → simpan ke localStorage
-if (tamu) {
-  localStorage.setItem("namaTamu", tamu);
-} else {
-  // Jika tidak ada → ambil dari localStorage
-  tamu = localStorage.getItem("namaTamu");
-}
+  const params = new URLSearchParams(window.location.search);
+  let tamu = params.get("tamu");
 
-// Default jika tetap kosong
-tamu = tamu || "Tamu Undangan";
+  if (tamu) {
+    localStorage.setItem("namaTamu", tamu);
+  } else {
+    tamu = localStorage.getItem("namaTamu");
+  }
 
-// Isi semua elemen dengan class .namaTamu
-document.querySelectorAll(".namaTamu").forEach(el => {
-  el.textContent = decodeURIComponent(tamu);
+  tamu = tamu || "Tamu Undangan";
+
+  const namaElements = document.querySelectorAll(".namaTamu");
+  namaElements.forEach(el => {
+    el.textContent = decodeURIComponent(tamu);
+  });
+
+
+  /* ================= ELEMENT SAFE CHECK ================= */
+
+  const openBtn = document.querySelector(".open-btn");
+  const homeSection = document.getElementById("homeSection");
+  const salamSection = document.getElementById("salamSection");
+  const coverCard = document.getElementById("coverCard");
+  const bottomNav = document.getElementById("bottomNav");
+  const navItems = document.querySelectorAll(".nav-item");
+
+
+  /* ================= OPEN INVITATION ================= */
+
+  if (openBtn && coverCard && homeSection && bottomNav) {
+    openBtn.addEventListener("click", function () {
+      coverCard.style.opacity = "0";
+
+      setTimeout(function () {
+        coverCard.style.display = "none";
+        homeSection.classList.add("show");
+        bottomNav.classList.add("show");
+      }, 600);
+    });
+  }
+
+
+  /* ================= NAVIGATION ================= */
+
+  function setActive(index) {
+    navItems.forEach(item => item.classList.remove("active"));
+    if (navItems[index]) {
+      navItems[index].classList.add("active");
+    }
+  }
+
+  if (navItems.length > 1) {
+
+    // Opening/Home
+    navItems[0].addEventListener("click", function () {
+      if (salamSection) salamSection.classList.remove("show");
+      if (homeSection) homeSection.classList.add("show");
+      setActive(0);
+    });
+
+    // Salam
+    navItems[1].addEventListener("click", function () {
+      if (homeSection) homeSection.classList.remove("show");
+      if (salamSection) salamSection.classList.add("show");
+      setActive(1);
+    });
+
+  }
+
 });
-
-
-/* =====================================================
-   OPEN INVITATION TRANSITION
-===================================================== */
-
-const openBtn = document.querySelector(".open-btn");
-const homeSection = document.getElementById("homeSection");
-const salamSection = document.getElementById("salamSection");
-const coverCard = document.getElementById("coverCard");
-const bottomNav = document.getElementById("bottomNav");
-
-if (openBtn) {
-  openBtn.addEventListener("click", () => {
-    coverCard.style.opacity = "0";
-
-    setTimeout(() => {
-      coverCard.style.display = "none";
-      homeSection.classList.add("show");
-      bottomNav.classList.add("show");
-    }, 600);
-  });
-}
-
-
-/* =====================================================
-   BOTTOM NAVIGATION SYSTEM
-===================================================== */
-
-const navItems = document.querySelectorAll(".nav-item");
-
-// Fungsi reset active
-function setActive(index) {
-  navItems.forEach(item => item.classList.remove("active"));
-  navItems[index].classList.add("active");
-}
-
-// Opening / Home
-if (navItems[0]) {
-  navItems[0].addEventListener("click", () => {
-    if (salamSection) salamSection.classList.remove("show");
-    if (homeSection) homeSection.classList.add("show");
-    setActive(0);
-  });
-}
-
-// Salam
-if (navItems[1]) {
-  navItems[1].addEventListener("click", () => {
-    if (homeSection) homeSection.classList.remove("show");
-    if (salamSection) salamSection.classList.add("show");
-    setActive(1);
-  });
-}
-
-
-/* =====================================================
-   OPTIONAL: SMOOTH FADE ANIMATION ON LOAD
-===================================================== */
-
-window.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".fade").forEach((el, index) => {
-    setTimeout(() => {
-      el.classList.add("show");
-    }, index
