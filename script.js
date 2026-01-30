@@ -1,23 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
+// ================= NAMA TAMU =================
 
-  /* =========================
-     NAMA TAMU DINAMIS
-  ========================= */
+const params = new URLSearchParams(window.location.search);
+const tamu = params.get("tamu");
+const namaEl = document.getElementById("namaTamu");
 
-  const params = new URLSearchParams(window.location.search);
-  const tamu = params.get("tamu");
-  const namaEl = document.getElementById("namaTamu");
+if (tamu) {
+  namaEl.textContent = decodeURIComponent(tamu);
+} else {
+  namaEl.textContent = "Tamu Undangan";
+}
 
-  if (namaEl) {
-    namaEl.textContent = tamu
-      ? decodeURIComponent(tamu)
-      : "Tamu Undangan";
-  }
+// ================= FADE-IN STAGGER =================
 
-  /* =========================
-     FADE STAGGER ANIMATION
-  ========================= */
-
+window.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".fade");
 
   elements.forEach((el, index) => {
@@ -25,5 +20,4 @@ document.addEventListener("DOMContentLoaded", () => {
       el.classList.add("show");
     }, index * 300);
   });
-
 });
