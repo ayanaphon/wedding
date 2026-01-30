@@ -6,9 +6,8 @@
 
 body {
   font-family: Georgia, serif;
-  background: #ffffff;
+  background: #f8f6f3;
   color: #7a1f1f;
-  text-align: center;
 }
 
 /* LOCK SCROLL */
@@ -16,135 +15,90 @@ body.locked {
   overflow: hidden;
 }
 
-/* OPENING FULLSCREEN */
+/* SECTION FULLSCREEN */
 .opening {
   position: relative;
-  width: 100%;
   min-height: 100vh;
-  overflow: hidden;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-/* CONTENT WRAPPER */
-.content {
+/* BATASI LEBAR KONTEN */
+.container {
+  width: 100%;
+  max-width: 500px;   /* INI KUNCI SUPAYA TIDAK MELEBAR */
+  text-align: center;
+  padding: 20px;
   position: relative;
   z-index: 2;
-  text-align: center;
 }
 
 /* ================= ORNAMEN ================= */
 
 .ornamen {
   position: absolute;
-  width: 280px;
-  opacity: 0.5;
+  width: 18vw;         /* responsive */
+  max-width: 220px;    /* batas maksimum */
   pointer-events: none;
-  z-index: 0;
+  opacity: 0.7;
 }
 
-/* ATAS */
+/* KIRI */
 .ornamen.left {
   top: 0;
   left: 0;
 }
 
+/* KANAN */
 .ornamen.right {
   top: 0;
   right: 0;
 }
 
-/* BAWAH (MIRROR) */
-.ornamen.bottom-left {
-  bottom: 0;
-  left: 0;
-  transform: scaleY(-1);
-}
-
-.ornamen.bottom-right {
-  bottom: 0;
-  right: 0;
-  transform: scaleY(-1);
-}
-
 /* ================= TEKS ================= */
 
 .couple {
-  font-size: 34px;
+  font-size: 32px;
   margin-bottom: 6px;
 }
 
 .date {
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 25px;
 }
 
-/* ILUSTRASI */
 .illustration img {
   width: 100%;
-  max-width: 420px;
+  max-width: 360px;
   margin-bottom: 25px;
 }
 
-/* TAMU */
 #namaTamu {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
-  opacity: 0;
   margin-top: 6px;
 }
 
-/* BUTTON */
 .open-btn {
   margin-top: 20px;
-  padding: 14px 34px;
+  padding: 12px 30px;
   background: #7a1f1f;
   color: white;
   border: none;
   border-radius: 30px;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
 }
 
-/* ================= ANIMASI ================= */
-
-@keyframes slideFromLeft {
-  from { opacity: 0; transform: translateX(-40px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideFromRight {
-  from { opacity: 0; transform: translateX(40px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-left {
-  animation: slideFromLeft 1.2s ease forwards;
-}
-
-.animate-right {
-  animation: slideFromRight 1.2s ease forwards;
-}
-
-.fade-in {
-  animation: fadeIn 1.2s ease forwards;
-  animation-delay: 0.6s;
-}
-
-/* RESPONSIVE */
+/* MOBILE */
 @media (max-width: 480px) {
   .ornamen {
-    width: 150px;
+    width: 28vw;
   }
 
   .couple {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
