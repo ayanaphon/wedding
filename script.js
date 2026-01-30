@@ -1,18 +1,19 @@
-// Ambil parameter URL
+// Ambil nama tamu dari URL
 const params = new URLSearchParams(window.location.search);
 const tamu = params.get("tamu");
-
-// Target elemen nama tamu
 const namaEl = document.getElementById("namaTamu");
 
-// Tampilkan nama tamu
+// Set nama tamu
 if (tamu) {
   namaEl.textContent = decodeURIComponent(tamu);
 } else {
   namaEl.textContent = "Tamu Undangan";
 }
 
-// Tombol buka undangan
+// Fungsi buka undangan
 function openInvitation() {
-  alert("Undangan dibuka");
+  document.body.classList.remove("locked");
+
+  // contoh lanjut ke halaman utama nanti
+  // window.location.href = "home.html";
 }
