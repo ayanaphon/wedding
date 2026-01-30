@@ -76,4 +76,29 @@ body {
 /* BUTTON */
 .open-btn {
   margin-top: 10px;
-  padding:
+  padding: 14px 36px;
+  background: #7a1f1f;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.open-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ================= FADE ANIMATION ================= */
+
+.fade {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
