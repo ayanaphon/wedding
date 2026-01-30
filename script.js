@@ -3,7 +3,7 @@ const params = new URLSearchParams(window.location.search);
 const tamu = params.get("tamu");
 
 // Target elemen nama tamu
-const namaEl = document.getElementById("Darten");
+const namaEl = document.getElementById("namaTamu");
 
 // Tampilkan nama tamu
 if (tamu) {
