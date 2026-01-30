@@ -5,12 +5,25 @@
 }
 
 body {
-  background: #6b4037;
+ body {
   font-family: Georgia, serif;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: 
+    linear-gradient(rgba(107,64,55,0.85), rgba(107,64,55,0.85)),
+    url("assets/batik-bg.jpg") center/cover no-repeat;
+  z-index: -1;
+}
+
 }
 
 /* WRAPPER LUAR */
@@ -135,3 +148,4 @@ body {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
