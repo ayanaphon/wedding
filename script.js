@@ -1,3 +1,4 @@
+// NAMA TAMU
 const params = new URLSearchParams(window.location.search);
 const tamu = params.get("tamu");
 const namaEl = document.getElementById("namaTamu");
@@ -8,6 +9,13 @@ if (tamu) {
   namaEl.textContent = "Tamu Undangan";
 }
 
-function openInvitation() {
-  document.body.classList.remove("locked");
-}
+// FADE STAGGER
+window.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".fade");
+
+  elements.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add("show");
+    }, index * 300);
+  });
+});
