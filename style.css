@@ -4,106 +4,92 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
+  background: #5b3a34; /* warna luar */
   font-family: Georgia, serif;
-  background: #f8f6f3;
-  color: #7a1f1f;
 }
 
-/* LOCK SCROLL */
-body.locked {
-  overflow: hidden;
-}
-
-/* FULLSCREEN CENTER PERFECT */
-.opening {
-  position: relative;
-  min-height: 100vh;
-
+/* WRAPPER LUAR */
+.outer {
   display: flex;
-  align-items: center;      /* center vertikal */
-  justify-content: center;  /* center horizontal */
-
-  overflow: hidden;
+  justify-content: center;
+  padding: 40px 20px;
 }
 
-/* BATASI LEBAR SUPAYA TIDAK MELEBAR */
-.container {
+/* CARD UTAMA */
+.card {
+  position: relative;
+  background: #f4f1ee;
   width: 100%;
-  max-width: 480px;
+  max-width: 500px;
+  min-height: 90vh;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 40px 20px 80px;
   text-align: center;
-  padding: 20px;
+}
+
+/* ORNAMEN ATAS */
+.frame {
+  position: absolute;
+  width: 160px;
+  top: 0;
+}
+
+.frame.left {
+  left: 0;
+}
+
+.frame.right {
+  right: 0;
+}
+
+/* ORNAMEN BAWAH */
+.bottom-ornament {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* CONTENT */
+.content {
   position: relative;
   z-index: 2;
 }
 
-/* ================= ORNAMEN ================= */
-
-.ornamen {
-  position: absolute;
-  width: 200px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* ATAS KIRI */
-.ornamen.left {
-  top: 0;
-  left: 0;
-}
-
-/* ATAS KANAN */
-.ornamen.right {
-  top: 0;
-  right: 0;
-}
-
-/* ================= KONTEN ================= */
-
 .couple {
   font-size: 30px;
-  margin-bottom: 8px;
+  color: #7a1f1f;
+  margin-bottom: 5px;
 }
 
 .date {
   font-size: 14px;
+  color: #7a1f1f;
   margin-bottom: 25px;
 }
 
 .illustration img {
   width: 100%;
-  max-width: 340px;
+  max-width: 320px;
   margin-bottom: 25px;
 }
 
 #namaTamu {
   font-size: 18px;
   font-weight: bold;
+  color: #7a1f1f;
   margin-top: 6px;
 }
 
 .open-btn {
   margin-top: 20px;
-  padding: 12px 28px;
+  padding: 12px 30px;
   background: #7a1f1f;
   color: white;
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
   font-size: 14px;
   cursor: pointer;
-}
-
-/* RESPONSIVE */
-@media (max-width: 480px) {
-  .ornamen {
-    width: 140px;
-  }
-
-  .couple {
-    font-size: 24px;
-  }
 }
