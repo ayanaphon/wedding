@@ -1,15 +1,3 @@
-// ================= NAMA TAMU =================
-
-const params = new URLSearchParams(window.location.search);
-const tamu = params.get("tamu");
-const namaEl = document.getElementById("namaTamu");
-
-if (tamu) {
-  namaEl.textContent = decodeURIComponent(tamu);
-}
-
-// ================= OPEN INVITATION =================
-
 const openBtn = document.querySelector(".open-btn");
 const homeSection = document.getElementById("homeSection");
 const card = document.getElementById("coverCard");
