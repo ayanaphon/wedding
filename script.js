@@ -1,13 +1,19 @@
 // Ambil parameter URL
 const params = new URLSearchParams(window.location.search);
-const namaTamu = params.get("tamu");
+const tamu = params.get("tamu");
 
-// Ambil elemen nama tamu
-const elNama = document.getElementById("namaTamu");
+// Target elemen nama tamu
+const namaEl = document.getElementById("Darten");
 
-// Tampilkan nama jika ada
-if (namaTamu && elNama) {
-  elNama.textContent = "Yth. " + decodeURIComponent(namaTamu);
-} else if (elNama) {
-  elNama.textContent = "Yth. Tamu Undangan";
+// Tampilkan nama tamu
+if (tamu) {
+  namaEl.textContent = decodeURIComponent(tamu);
+} else {
+  namaEl.textContent = "Tamu Undangan";
+}
+
+// Tombol buka undangan
+function openInvitation() {
+  // ganti ke halaman utama undangan
+  window.location.href = "home.html";
 }
