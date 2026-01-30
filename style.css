@@ -16,62 +16,57 @@ body.locked {
   overflow: hidden;
 }
 
-/* OPENING */
+/* OPENING FULLSCREEN */
 .opening {
   position: relative;
-  overflow: hidden;
+  width: 100%;
   min-height: 100vh;
-  padding: 40px 20px 60px;
+  overflow: hidden;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* ================= ORNAMEN BATIK ================= */
+/* CONTENT WRAPPER */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* ================= ORNAMEN ================= */
 
 .ornamen {
   position: absolute;
-  top: 0;
-  width: 220px;
-  opacity: 0;
+  width: 280px;
+  opacity: 0.5;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
 
-/* KIRI */
+/* ATAS */
 .ornamen.left {
-  left: -20px;
-  animation: batikFromLeft 1.6s ease forwards;
+  top: 0;
+  left: 0;
 }
 
-/* KANAN */
 .ornamen.right {
-  right: -20px;
-  animation: batikFromRight 1.6s ease forwards;
+  top: 0;
+  right: 0;
 }
 
-/* ANIMASI MASUK */
-@keyframes batikFromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-80px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* BAWAH (MIRROR) */
+.ornamen.bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
 }
 
-@keyframes batikFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(80px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.ornamen.bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: scaleY(-1);
 }
 
 /* ================= TEKS ================= */
@@ -79,43 +74,31 @@ body.locked {
 .couple {
   font-size: 34px;
   margin-bottom: 6px;
-  z-index: 2;
 }
 
 .date {
   font-size: 16px;
   margin-bottom: 25px;
-  z-index: 2;
 }
 
 /* ILUSTRASI */
-.illustration {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 30px;
-  z-index: 2;
-}
-
 .illustration img {
   width: 100%;
   max-width: 420px;
+  margin-bottom: 25px;
 }
 
 /* TAMU */
-.guest {
-  margin-bottom: 25px;
-  z-index: 2;
-}
-
 #namaTamu {
   font-size: 22px;
   font-weight: bold;
   opacity: 0;
+  margin-top: 6px;
 }
 
 /* BUTTON */
 .open-btn {
+  margin-top: 20px;
   padding: 14px 34px;
   background: #7a1f1f;
   color: white;
@@ -123,42 +106,23 @@ body.locked {
   border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
-  z-index: 2;
 }
 
-/* ================= ANIMASI TEKS ================= */
+/* ================= ANIMASI ================= */
 
 @keyframes slideFromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-left {
@@ -178,10 +142,6 @@ body.locked {
 @media (max-width: 480px) {
   .ornamen {
     width: 150px;
-  }
-
-  .illustration img {
-    max-width: 360px;
   }
 
   .couple {
