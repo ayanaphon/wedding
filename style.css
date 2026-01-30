@@ -4,48 +4,88 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: Georgia, serif;
+}
+
 /* ================= BACKGROUND ================= */
 
 body {
-  font-family: Georgia, serif;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #7a1f1f, #6b4037);
 }
 
-/* ================= COVER ================= */
+/* ================= PHONE FRAME ================= */
 
-.outer {
+.phone-wrapper {
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.card {
+.phone-frame {
+  width: 360px;
+  height: 720px;
+  background: #111;
+  border-radius: 40px;
+  padding: 12px;
+  position: relative;
+  box-shadow:
+    0 40px 100px rgba(0,0,0,0.6),
+    inset 0 0 0 2px rgba(255,255,255,0.05);
+}
+
+/* Notch */
+.phone-frame::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 25px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+/* ================= SCREEN ================= */
+
+.card, .home {
   width: 100%;
-  max-width: 500px;
-  min-height: 100vh;
-  padding: 60px 30px;
-  text-align: center;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+
   background:
     linear-gradient(rgba(244,241,238,0.96), rgba(244,241,238,0.96)),
     url("assets/batik.jpg") center/cover no-repeat;
+
   transition: 0.8s ease;
 }
+
+/* ================= COVER ================= */
 
 .content {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 40px 20px;
 }
 
 .couple {
-  font-size: 32px;
+  font-size: 28px;
   color: #7a1f1f;
 }
 
@@ -54,7 +94,7 @@ body {
 }
 
 .illustration img {
-  max-width: 260px;
+  max-width: 220px;
 }
 
 .guest p {
@@ -62,17 +102,17 @@ body {
 }
 
 #namaTamu {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: #7a1f1f;
 }
 
 .open-btn {
-  padding: 14px 36px;
+  padding: 12px 30px;
   background: #7a1f1f;
   color: white;
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -84,19 +124,11 @@ body {
 /* ================= HOME ================= */
 
 .home {
-  position: fixed;
-  inset: 0;
-  background:
-    linear-gradient(rgba(244,241,238,0.96), rgba(244,241,238,0.96)),
-    url("assets/batik.jpg") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: 0;
   pointer-events: none;
-  transition: 0.8s ease;
 }
 
 .home.show {
@@ -105,29 +137,28 @@ body {
 }
 
 .home-content {
-  max-width: 500px;
-  padding: 40px;
+  padding: 40px 20px;
 }
 
 .home h2 {
-  font-size: 32px;
+  font-size: 28px;
   color: #7a1f1f;
 }
 
 .home-date {
-  margin-top: 10px;
+  margin-top: 8px;
   color: #7a1f1f;
 }
 
 .divider {
-  width: 80px;
+  width: 70px;
   height: 2px;
   background: #7a1f1f;
-  margin: 20px auto;
+  margin: 18px auto;
 }
 
 .event {
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 /* ================= BOTTOM NAV ================= */
@@ -135,43 +166,40 @@ body {
 .bottom-nav {
   position: fixed;
   bottom: -100px;
-  left: 0;
-  width: 100%;
-  height: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 360px;
+  height: 65px;
   background: #7a1f1f;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: 0 -5px 20px rgba(0,0,0,0.25);
+  border-radius: 20px;
   transition: 0.5s ease;
   z-index: 999;
 }
 
 .bottom-nav.show {
-  bottom: 0;
+  bottom: 20px;
 }
 
 .nav-item {
   text-align: center;
   color: white;
-  font-size: 12px;
+  font-size: 11px;
   cursor: pointer;
   flex: 1;
-  padding: 10px 0;
-  transition: 0.3s;
 }
 
 .nav-item span {
   display: block;
-  font-size: 20px;
-  margin-bottom: 4px;
+  font-size: 18px;
+  margin-bottom: 3px;
 }
 
 .nav-item.active {
   background: #d4b45f;
   color: #7a1f1f;
-  border-radius: 15px;
-  margin: 5px;
+  border-radius: 12px;
+  padding: 5px 0;
 }
